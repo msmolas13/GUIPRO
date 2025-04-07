@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    padding: 1rem;
+}
+header {
+    background-color: #004d99;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+nav {
+    background-color: #ddd;
+    padding: 0.5rem;
+    text-align: center;
+}
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+main {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+form input, form textarea, form select {
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 400px;
+}
+button {
+    padding: 0.5rem 1rem;
+    background: #004d99;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    nav {
+        font-size: 0.9rem;
+    }
+}

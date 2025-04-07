@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Customer Inquiries</h2>
+<ul>
+  {% for inquiry in inquiries %}
+    <li>
+      <strong>{{ inquiry.name }}</strong> ({{ inquiry.email }})<br>
+      Inquired about: {{ inquiry.car.year }} {{ inquiry.car.make }} {{ inquiry.car.model }}<br>
+      Message: {{ inquiry.message }}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

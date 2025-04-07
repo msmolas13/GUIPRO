@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Welcome to Best Deals Auto!</h2>
+<p>Your trusted car dealership. Browse our inventory and find your dream car.</p>
+<h3>Featured Cars:</h3>
+<ul>
+  {% for car in cars %}
+    <li>{{ car.year }} {{ car.make }} {{ car.model }} - {{ car.price }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

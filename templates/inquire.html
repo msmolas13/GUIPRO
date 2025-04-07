@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Vehicle Inquiry</h2>
+
+<!-- ✅ method="POST" is required here -->
+<form method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" required><br>
+
+  <label>Email:</label>
+  <input type="email" name="email" required><br>
+
+  <label>Select a Car:</label>
+  <select name="car_id" required>
+    {% for car in cars %}
+      <option value="{{ car.id }}">{{ car.year }} {{ car.make }} {{ car.model }}</option>
+    {% endfor %}
+  </select><br>
+
+  <label>Message:</label>
+  <textarea name="message" required></textarea><br>
+
+  <button type="submit">Submit Inquiry</button>
+</form>
+{% endblock %}
+
